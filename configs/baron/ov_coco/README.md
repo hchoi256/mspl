@@ -5,7 +5,7 @@ Prepare data following [MMDetection](https://github.com/open-mmlab/mmdetection).
 Download the following files:
 * [Metadata JSON files](https://drive.google.com/drive/folders/1O6rt6WN2ePPg6j-wVgF89T7ql2HiuRIG?usp=sharing)
 * [lvis_v1_train_base.json](https://drive.google.com/drive/folders/1d06y8DxfgkitPRGuk3HSp8BwG7ZFRLeu)
-* The pre-generated [pseudo-label JSON file](https://huggingface.co/datasets/hchoi256/CoT-PL/tree/main)
+* The pre-generated [pseudo-label JSON file](https://huggingface.co/datasets/hchoi256/MSPL/tree/main)
 
 Place the pseudo-label JSON file as: `data/coco/hchoi/instances_train2017_pseudo_v0_new_caption.json`
 
@@ -69,7 +69,7 @@ Lastly, add the pseudo-label categories to the framework.
 
 For pseudo-labels:
 * Follow [pseudo-labels](../../../pseudo-labels/README.md) to generate pseudo-labels.
-* Or directly download the pre-generated pseudo-labels from [Hugging Face](https://huggingface.co/datasets/hchoi256/CoT-PL/tree/main).
+* Or directly download the pre-generated pseudo-labels from [Hugging Face](https://huggingface.co/datasets/hchoi256/MSPL/tree/main).
 
 ## Class Embeddings
 ### OV-COCO
@@ -139,7 +139,7 @@ The implementation based on MMDet3.x achieves better results compared to the res
 |:-----------:|:--------:|:--------:|:------------:|:----------:|:------------------------------------------------------------------------------------:|:-------------------------:|
 |  Paper  | R-50-FPN |  BARON   |     CLIP     |    34.0    |    -     | - |
 |  This Repo  | R-50-FPN |  BARON   |     CLIP     |    34.6    |    [config](baron_kd_faster_rcnn_r50_fpn_syncbn_90kx2.py)     | [model](https://drive.google.com/drive/folders/1JTM0uoPQZtq7lnhZxCBwjxBUca9omYR9?usp=sharing) |
-|  Paper  | R-50-FPN |  CoT-PL   |     CLIP     |    43.4    |    [config](baron_kd_faster_rcnn_r50_fpn_syncbn_90kx2.py)     | [model](https://drive.google.com/drive/folders/1d06y8DxfgkitPRGuk3HSp8BwG7ZFRLeu?usp=sharing) |
+|  Paper  | R-50-FPN |  MSPL   |     CLIP     |    43.4    |    [config](baron_kd_faster_rcnn_r50_fpn_syncbn_90kx2.py)     | [model](https://drive.google.com/drive/folders/1d06y8DxfgkitPRGuk3HSp8BwG7ZFRLeu?usp=sharing) |
 
 To test the models, run
 ```bash

@@ -1,14 +1,14 @@
-# [ECCV 26] CoT-PL: Chain-of-Thought Pseudo-Labeling for Open-Vocabulary Object Detection
+# [ECCV 26] MSPL: Multi-Step Pseudo-Labeling for Open-Vocabulary Object Detection
 
 <img src="./assets/eccv.png" alt="스크린샷" width="500">
 
 ## Introduction
 
-This is an official release of the paper **CoT-PL: Chain-of-Thought Pseudo-Labeling for Open-Vocabulary Object Detection**.
+This is an official release of the paper **MSPL: Multi-Step Pseudo-Labeling for Open-Vocabulary Object Detection**.
 
-> [**CoT-PL: Chain-of-Thought Pseudo-Labeling for Open-Vocabulary Object Detection**](https://arxiv.org/abs/2510.14792),            
+> [**MSPL: Multi-Step Pseudo-Labeling for Open-Vocabulary Object Detection**](https://arxiv.org/abs/2510.14792),            
 > Hojun Choi, Youngsun Lim, Jaeyo Shin, Hyunjung Shim
-> [[Paper](https://arxiv.org/pdf/2510.14792)][[Bibtex](https://github.com/hchoi256/cotpl#citation)]
+> [[Paper](https://arxiv.org/pdf/2510.14792)][[Project Page](https://hchoi256.github.io/projects/mspl/)][[Dataset](https://huggingface.co/datasets/hchoi256/MSPL)][[Bibtex](https://github.com/hchoi256/mspl#citation)]
 
 
 
@@ -16,13 +16,10 @@ This is an official release of the paper **CoT-PL: Chain-of-Thought Pseudo-Label
 
 ⛽⛽⛽ Contact: [eric970412@gmail.com](mailto:eric970412@gmail.com) or [hchoi256@kaist.ac.kr](mailto:hchoi256@kaist.ac.kr)
 
-* We will update arXiv and the GitHub codebase to align with the ECCV camera-ready version. Stay tuned! 🙇‍♂️
-* **[2026.06.17]** 🎉 CoT-PL has been accepted to [ECCV 2026](https://eccv.ecva.net/).
-* **[2026.04.04]** 🎉 CoT-PL has been accepted to the non-archival [CVPR 2026 Workshop MUSI](https://musi-workshop.github.io/).
+* **[2026.06.24]** 📄 Our ECCV-version paper is now available on [arXiv](https://arxiv.org/abs/2510.14792v4).
+* **[2026.06.17]** 🎉 MSPL has been accepted to [ECCV 2026](https://eccv.ecva.net/).
+* **[2026.04.04]** 🎉 MSPL has been accepted to the non-archival [CVPR 2026 Workshop MUSI](https://musi-workshop.github.io/).
 * **[2026.03.26]** The code has been released and will continue to be updated.
-* **[2026.03.18]** 📄 Our paper v3 is now available on [arXiv](https://arxiv.org/abs/2510.14792).
-  * Added a region-text alignment (RTA) module for improved cross-modal grounding.
-  * Updated the chain-of-thought prompt template for more consistent reasoning.
 
 
 ## Installation
@@ -56,11 +53,11 @@ model, _ = clip.load("ViT-B/16")
 torch.save(model.state_dict(), 'checkpoints/clip_vitb16.pth')
 ```
 
-### Offline Chain-of-Thought Pseudo-Labeling
+### Offline Multi-Step Pseudo-Labeling
 
 For pseudo-label generation,
 - follow [the instructions](pseudo-labels/README.md) to generate pseudo-labels for base-category training images.
-- or directly download the pre-generated pseudo-labels, [instances_train2017_pseudo_v0_new_caption.json](https://huggingface.co/datasets/hchoi256/CoT-PL/tree/main), from Hugging Face.
+- or directly download the pre-generated pseudo-labels, [instances_train2017_pseudo_v0_new_caption.json](https://huggingface.co/datasets/hchoi256/MSPL/tree/main), from Hugging Face.
 
 Note that OV-COCO and OV-LVIS share the same 118,287 training images, but their annotations differ.
 
@@ -76,14 +73,14 @@ This project is released under the [NTU S-Lab License 1.0](LICENSE).
 ## Citation
 
 ```bibtex
-@misc{choi2025cotplvisualchainofthoughtreasoning,
-      title={CoT-PL: Chain-of-Thought Pseudo-Labeling for Open-Vocabulary Object Detection}, 
+@misc{choi2026msplmultisteppseudolabelingopenvocabulary,
+      title={MSPL: Multi-Step Pseudo-Labeling for Open-Vocabulary Object Detection}, 
       author={Hojun Choi and Youngsun Lim and Jaeyo Shin and Hyunjung Shim},
-      year={2025},
+      year={2026},
       eprint={2510.14792},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2510.14792}, 
+      url={https://arxiv.org/abs/2510.14792v4}, 
 }
 ```
 

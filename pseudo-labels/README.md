@@ -30,7 +30,7 @@ Place the checkpoint `sam_vit_b_01ec64.pth` in the `checkpoints/` directory:
 wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
 ```
 
-## 1) Chain-of-Thought Pseudo-Label Generation
+## 1) Multi-Step Pseudo-Label Generation
 In our setting, pseudo-annotations are generated for a subset of 10,000 training images using a single GPU.
 
 The process can be parallelized across 12 GPUs to handle the full 118,287 images in the COCO training set.
